@@ -34,12 +34,22 @@
 }
 
 /* Base */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: var(--color-primary-dark);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
 }
 
 address {
@@ -47,11 +57,34 @@ address {
 }
 
 ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+
 }
 
 /* Button */
 .button {
+    padding: 16px 32px;
     color: var(--color-primary-light);
     font-weight: 600;
     background-color: var(--color-brand-light);
@@ -74,11 +107,40 @@ ul {
 
 .link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
+}
+
+/* Header */
+.header {
+    background-color: lightgrey;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Hero */
+.hero-section {
+    padding: 272px 0;
+}
+
 .hero-title {
+    margin-bottom: 0;
     color: var(--color-primary-light);
     text-align: center;
     font-size: 128px;
@@ -90,12 +152,19 @@ ul {
 }
 
 /* Advantage */
-.advantages-list {
-    color: var(--color-primary-light);
+.advantages-section {
+    padding: 16px 0;
     background-color: var(--color-brand-light);
 }
 
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 .advantages-item {
+    color: var(--color-primary-light);
     font-size: 20px;
     font-weight: 300;
 }
@@ -106,14 +175,27 @@ ul {
     line-height: 1.3;
 }
 
-
 .section-title .accent {
     color: var(--color-brand-dark);
 }
 
 /* Traditions */
-.traditions-text {
-    white-space: nowrap;
+.traditions-section {
+    padding-top: 96px;
+}
+
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.traditions-content {
+    max-width: 710px;
+}
+
+.traditions-title {
+    margin-bottom: 42px;
 }
 
 .traditions-text .brand {
@@ -125,14 +207,41 @@ ul {
     text-transform: uppercase;
 }
 
+.traditions-text.limited {
+    max-width: 330px;
+}
+
 /* Chef */
+.chefs-title {
+    margin-bottom: 80px;
+}
 
 .chef-title {
+    margin-bottom: 16px;
     font-size: 40px;
     font-weight: 600;
 }
 
 /* Format */
+.formats-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.format-item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+
+.format-card {
+    padding: 24px;
+    border: 1px solid lightgrey;
+    border-radius: 16px;
+}
+
+.formats-title {
+    margin-bottom: 80px;
+}
 
 .format-title {
     font-size: 24px;
@@ -144,8 +253,12 @@ ul {
     font-weight: 300;
 }
 
-/* Footer */
+/* Contacts */
+.contact-title {
+    margin-bottom: 16px;
+}
 
+/* Footer */
 .address-link {
     color: var(--color-primary-light);
     font-size: 16px;
